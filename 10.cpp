@@ -84,3 +84,17 @@ int main() {
 
     return 0;
 }
+
+/*
+Input:
+4
+0 10 15 20
+10 0 35 25
+15 35 0 30
+20 25 30 0
+
+Output:
+Enter number of cities: Enter cost matrix (0 for no edge):
+Minimum cost: 80
+Path: 0 1 3 2 0
+*/

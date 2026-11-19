@@ -132,3 +132,25 @@ int main() {
 
     return 0;
 }
+
+/*
+Input:
+3
+50
+10 60
+20 100
+30 120
+
+Output:
+Enter number of items: Enter knapsack capacity:
+Enter weights and profits:
+Item 1: Item 2: Item 3:
+Fractional Knapsack (Greedy):
+Maximum Profit = 240.00
+
+0/1 Knapsack (Greedy - Comparison):
+Maximum Profit = 220
+
+0/1 Knapsack (Dynamic Programming):
+Maximum Profit = 220
+*/

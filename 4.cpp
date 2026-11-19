@@ -71,3 +71,24 @@ int main() {
 
     return 0;
 }
+
+/*
+Input:
+5
+0 10 3 0 0
+10 0 1 2 0
+3 1 0 8 0
+0 2 8 0 7
+0 0 0 7 0
+0
+
+Output:
+Enter number of vertices: Enter cost matrix (0 for no edge):
+Enter source vertex:
+Shortest distances from source 0:
+0 to 0 = 0
+0 to 1 = 4
+0 to 2 = 3
+0 to 3 = 6
+0 to 4 = 13
+*/

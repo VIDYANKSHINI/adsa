@@ -88,3 +88,19 @@ int main() {
 
     return 0;
 }
+
+/*
+Input:
+No input
+
+Output:
+Adjacency Matrix:
+0 1 1 0 0
+1 0 0 1 0
+1 0 0 1 0
+0 1 1 0 1
+0 0 0 1 0
+
+BFS: 0 1 2 3 4
+DFS: 0 2 3 4 1
+*/

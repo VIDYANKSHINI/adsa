@@ -39,3 +39,20 @@ int main() {
 
     return 0;
 }
+
+/*
+Input:
+4
+0 5 99999 10
+99999 0 3 99999
+99999 99999 0 1
+99999 99999 99999 0
+
+Output:
+Enter number of vertices: Enter cost matrix (99999 for INF):
+Shortest distance matrix:
+0 5 8 9
+INF 0 3 4
+INF INF 0 1
+INF INF INF 0
+*/

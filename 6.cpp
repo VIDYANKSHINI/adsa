@@ -126,3 +126,14 @@ int main() {
 
     return 0;
 }
+
+/*
+Input:
+5
+50 30 70 20 40
+
+Output:
+Enter number of nodes: Enter values:
+Inorder Traversal: 20 30 40 50 70
+Preorder Traversal: 50 30 20 40 70
+*/

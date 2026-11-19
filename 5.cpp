@@ -123,3 +123,39 @@ int main() {
 
     return 0;
 }
+
+/*
+Input:
+5
+12 22 32 42 52
+22
+
+Output:
+Enter number of elements: Enter elements:
+Chaining Hash Table:
+0 : NULL
+1 : NULL
+2 : 12 -> 22 -> 32 -> 42 -> 52 -> NULL
+3 : NULL
+4 : NULL
+5 : NULL
+6 : NULL
+7 : NULL
+8 : NULL
+9 : NULL
+
+Linear Probing Hash Table:
+0 : Empty
+1 : Empty
+2 : 12
+3 : 22
+4 : 32
+5 : 42
+6 : 52
+7 : Empty
+8 : Empty
+9 : Empty
+
+Enter element to search: Found in Chaining
+Found in Linear Probing
+*/

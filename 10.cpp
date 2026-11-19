@@ -5,65 +5,51 @@
 #include <climits>
 using namespace std;
 
-int n, cost[10][10];
-int bestCost = INT_MAX;
-vector<int> bestPath;
+int n, cost[10][10], best = INT_MAX;
+vector<int> ans;
 
 struct Node {
-    int city, level, total;
-    int visited;
+    int city, level, total, visited;
     vector<int> path;
 
-    bool operator>(const Node& other) const {
-        return total > other.total;
+    bool operator>(const Node& x) const {
+        return total > x.total;
     }
 };
 
 void solve() {
     priority_queue<Node, vector<Node>, greater<Node>> pq;
-
-    Node start;
-    start.city = 0;
-    start.level = 1;
-    start.total = 0;
-    start.visited = 1;
-    start.path.push_back(0);
-
-    pq.push(start);
+    pq.push({0, 1, 0, 1, {0}});
 
     while (!pq.empty()) {
         Node cur = pq.top();
         pq.pop();
 
-        if (cur.total >= bestCost)
-            continue;
+        if (cur.total >= best) continue;
 
         if (cur.level == n) {
             if (cost[cur.city][0] != 0) {
-                int ans = cur.total + cost[cur.city][0];
+                int t = cur.total + cost[cur.city][0];
 
-                if (ans < bestCost) {
-                    bestCost = ans;
-                    bestPath = cur.path;
-                    bestPath.push_back(0);
+                if (t < best) {
+                    best = t;
+                    ans = cur.path;
+                    ans.push_back(0);
                 }
             }
             continue;
         }
 
         for (int i = 0; i < n; i++) {
-            if (!(cur.visited & (1 << i)) &&
-                cost[cur.city][i] != 0) {
-
-                Node next;
+            if (!(cur.visited & (1 << i)) && cost[cur.city][i] != 0) {
+                Node next = cur;
                 next.city = i;
-                next.level = cur.level + 1;
-                next.total = cur.total + cost[cur.city][i];
-                next.visited = cur.visited | (1 << i);
-                next.path = cur.path;
+                next.level++;
+                next.total += cost[cur.city][i];
+                next.visited |= (1 << i);
                 next.path.push_back(i);
 
-                if (next.total < bestCost)
+                if (next.total < best)
                     pq.push(next);
             }
         }
@@ -80,23 +66,20 @@ int main() {
     }
 
     cout << "Enter cost matrix (0 for no edge):\n";
+
     for (int i = 0; i < n; i++)
         for (int j = 0; j < n; j++)
             cin >> cost[i][j];
 
     solve();
 
-    if (bestCost == INT_MAX) {
+    if (best == INT_MAX)
         cout << "No tour exists";
-    }
     else {
-        cout << "Minimum cost: " << bestCost << endl;
+        cout << "Minimum cost: " << best << endl;
         cout << "Path: ";
-
-        for (int city : bestPath)
-            cout << city << " ";
-
-        cout << endl;
+        for (int x : ans)
+            cout << x << " ";
     }
 
     return 0;

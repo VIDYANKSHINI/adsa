@@ -9,7 +9,7 @@ bool safe(int row, int col) {
         if (board[i][col])
             return false;
 
-    for (int i = row-1, j = col-1; i >= 0 && j >= 0; i--, j--)
+    for (int i = row-1, j   = col-1; i >= 0 && j >= 0; i--, j--)
         if (board[i][j])
             return false;
 
@@ -73,4 +73,12 @@ Solution:
 0 0 0 1
 1 0 0 0
 0 0 1 0
+*/
+
+/*
+Time Complexity:
+Worst case: O(N!)
+
+Space Complexity:
+O(N^2) for the board, or O(N) if only the recursion stack and one-dimensional board state are considered
 */

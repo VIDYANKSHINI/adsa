@@ -137,3 +137,13 @@ Enter number of nodes: Enter values:
 Inorder Traversal: 20 30 40 50 70
 Preorder Traversal: 50 30 20 40 70
 */
+
+/*
+Time Complexity:
+Insertion:
+Average O(log n), worst O(n)
+Inorder/Preorder traversal: O(n)
+
+Space Complexity:
+O(n) for the threaded binary tree and traversal
+*/

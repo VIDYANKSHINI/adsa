@@ -154,3 +154,14 @@ Maximum Profit = 220
 0/1 Knapsack (Dynamic Programming):
 Maximum Profit = 220
 */
+
+/*
+Time Complexity:
+Fractional Knapsack: O(n log n) due to sorting
+Greedy 0/1 demonstration: O(n log n) due to sorting
+0/1 Knapsack using DP: O(n * W)
+
+Space Complexity:
+Fractional/Greedy Knapsack: O(n)
+0/1 Knapsack using DP: O(n * W)
+*/

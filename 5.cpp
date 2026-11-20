@@ -159,3 +159,12 @@ Linear Probing Hash Table:
 Enter element to search: Found in Chaining
 Found in Linear Probing
 */
+
+/*
+Time Complexity:
+Chaining: Average O(1) for insert/search, worst O(n)
+Linear probing: Average O(1) for insert/search, worst O(n)
+
+Space Complexity:
+O(SIZE + n), where SIZE is the hash table size and n is the number of inserted elements
+*/

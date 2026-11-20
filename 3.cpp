@@ -104,3 +104,13 @@ Adjacency Matrix:
 BFS: 0 1 2 3 4
 DFS: 0 2 3 4 1
 */
+
+/*
+Time Complexity:
+BFS: O(V + E)
+DFS: O(V + E)
+
+Space Complexity:
+BFS/DFS: O(V + E) for adjacency list, including O(V) for visited and auxiliary structures
+Adjacency matrix: O(V^2)
+*/

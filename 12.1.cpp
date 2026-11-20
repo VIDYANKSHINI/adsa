@@ -117,3 +117,13 @@ Enter number of items: Enter capacity: Enter weight and profit:
 Branch & Bound -> Max Profit: 300 | Nodes Explored: 5
 Dynamic Prog.  -> Max Profit: 300 | Table Steps (n*W): 200
 */
+
+/*
+Time Complexity:
+Branch and Bound: Worst case O(2^n)
+Dynamic Programming: O(n * W), where W is the knapsack capacity
+
+Space Complexity:
+Branch and Bound: O(n) auxiliary recursion stack
+Dynamic Programming: O(n * W)
+*/

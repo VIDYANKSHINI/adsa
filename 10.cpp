@@ -98,3 +98,12 @@ Enter number of cities: Enter cost matrix (0 for no edge):
 Minimum cost: 80
 Path: 0 1 3 2 0
 */
+
+/*
+Time Complexity:
+Branch-and-Bound worst case: O(n!), where n is the number of cities
+
+Space Complexity:
+O(n!) in the worst case for priority queue and path states
+Auxiliary recursion-free state space: O(n) for the best stored path
+*/
